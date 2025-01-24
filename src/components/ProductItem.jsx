@@ -1,11 +1,13 @@
-import "./ProductItem.css"
+import { useShoppingCartStore } from "../stores";
 
 export const ProductItem = ({ product }) => {
+  const addToCart = useShoppingCartStore((state) => state.addToCart);
+
   return (
-    <div className="product-item-card">
+    <div style={{ width: '100%', marginTop: "10px", padding: "10px", border: "1px solid gray" }}>
       <h3>{product.name}</h3>
       <p>Prix : {product.price} €</p>
-      <button>Ajouter au panier</button>
+      <button onClick={() => addToCart(product)}>Ajouter au panier</button>
     </div>
   );
 };
