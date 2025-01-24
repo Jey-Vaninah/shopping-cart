@@ -1,0 +1,7 @@
+.product-item-card {
+  padding: 10px;
+  border: 1px solid gray;
+  margin: 10px auto;
+  width: fit-content;
+  min-width: 500px;
+}
